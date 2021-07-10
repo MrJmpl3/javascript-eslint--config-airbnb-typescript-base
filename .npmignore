@@ -5,6 +5,7 @@
 /node_modules
 .editorconfig
 .eslintignore
+.eslintrc.js
 .gitignore
 .npmignore
 .prettierrc.js
