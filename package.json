@@ -4,6 +4,7 @@
   "license": "MIT",
   "author": "José Manuel Casani Guerra <jmpl3.soporte@gmail.com>",
   "main": "index.js",
+  "version": "1.0.0",
   "scripts": {
     "format": "yarn run format:package && yarn run format:prettier && yarn run format:eslint",
     "format:eslint": "eslint --fix ./ >/dev/null 2>&1 || true",
