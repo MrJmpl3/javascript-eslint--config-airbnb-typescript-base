@@ -1,0 +1,12 @@
+*
+
+!/shared.js
+!/without-ts-type-checking.js
+!/index.js
+!/rules/**/*
+
+!/package.json
+
+!/CHANGELOG.md
+!/LICENCE
+!/README.md
