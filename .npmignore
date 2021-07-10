@@ -1,3 +1,5 @@
+/.idea
+/vscode
 /.husky
 /.yarn
 /node_modules
