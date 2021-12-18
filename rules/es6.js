@@ -55,9 +55,9 @@ module.exports = {
     'no-const-assign': 'error',
 
     // disallow duplicate class members
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dupe-class-members.md
+    // https://eslint.org/docs/rules/no-dupe-class-members
     'no-dupe-class-members': 'off',
-    '@typescript-eslint/no-dupe-class-members': ['error'],
+    '@typescript-eslint/no-dupe-class-members': 'error',
 
     // disallow importing from the same path more than once
     // https://eslint.org/docs/rules/no-duplicate-imports
@@ -71,13 +71,12 @@ module.exports = {
 
     // Disallow specified names in exports
     // https://eslint.org/docs/rules/no-restricted-exports
-    // TODO enable, semver-minor, once eslint v7 is required (which is major)
     'no-restricted-exports': [
-      'off',
+      'error',
       {
         restrictedNamedExports: [
           'default', // use `export default` to provide a default export
-          'then', // this will cause tons of confusion when your module is dynamically `import()`ed
+          'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
         ],
       },
     ],
@@ -101,9 +100,9 @@ module.exports = {
     'no-useless-computed-key': 'error',
 
     // disallow unnecessary constructor
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md
+    // https://eslint.org/docs/rules/no-useless-constructor
     'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': ['error'],
+    '@typescript-eslint/no-useless-constructor': 'error',
 
     // disallow renaming import, export, and destructured assignments to the same name
     // https://eslint.org/docs/rules/no-useless-rename

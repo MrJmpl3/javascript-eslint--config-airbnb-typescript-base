@@ -39,16 +39,14 @@ module.exports = {
 
     // Enforce default clauses in switch statements to be last
     // https://eslint.org/docs/rules/default-case-last
-    // TODO: enable, semver-minor, when eslint v7 is required (which is a major)
-    'default-case-last': 'off',
+    'default-case-last': 'error',
 
     // https://eslint.org/docs/rules/default-param-last
-    // TODO: enable, semver-minor, when eslint v6.4 is required (which is a major)
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'off',
 
     // encourages use of dot notation whenever possible
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/dot-notation.md
+    // https://eslint.org/docs/rules/dot-notation
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': 'off',
 
@@ -62,8 +60,7 @@ module.exports = {
 
     // Require grouped accessor pairs in object literals and classes
     // https://eslint.org/docs/rules/grouped-accessor-pairs
-    // TODO: enable in next major, altho the guide forbids getters/setters anyways
-    'grouped-accessor-pairs': 'off',
+    'grouped-accessor-pairs': 'error',
 
     // make sure for-in loops have an if statement
     // https://eslint.org/docs/rules/guard-for-in
@@ -87,8 +84,7 @@ module.exports = {
 
     // Disallow returning value in constructor
     // https://eslint.org/docs/rules/no-constructor-return
-    // TODO: enable, semver-major
-    'no-constructor-return': 'off',
+    'no-constructor-return': 'error',
 
     // disallow division operators explicitly at beginning of regular expression
     // https://eslint.org/docs/rules/no-div-regex
@@ -99,7 +95,7 @@ module.exports = {
     'no-else-return': ['error', { allowElseIf: false }],
 
     // disallow empty functions, except for standalone funcs/arrows
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
+    // https://eslint.org/docs/rules/no-empty-function
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': [
       'error',
@@ -170,7 +166,7 @@ module.exports = {
     '@typescript-eslint/no-implied-eval': 'off',
 
     // disallow this keywords outside of classes or class-like objects
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-invalid-this.md
+    // https://eslint.org/docs/rules/no-invalid-this
     'no-invalid-this': 'off',
     '@typescript-eslint/no-invalid-this': 'off',
 
@@ -187,12 +183,12 @@ module.exports = {
     'no-lone-blocks': 'error',
 
     // disallow creation of functions within loops
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loop-func.md
+    // https://eslint.org/docs/rules/no-loop-func
     'no-loop-func': 'off',
-    '@typescript-eslint/no-loop-func': ['error'],
+    '@typescript-eslint/no-loop-func': 'error',
 
     // disallow magic numbers
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
+    // https://eslint.org/docs/rules/no-magic-numbers
     'no-magic-numbers': 'off',
     '@typescript-eslint/no-magic-numbers': [
       'off',
@@ -231,8 +227,7 @@ module.exports = {
 
     // Disallow \8 and \9 escape sequences in string literals
     // https://eslint.org/docs/rules/no-nonoctal-decimal-escape
-    // todo: semver-major: enable when v7.14 is required
-    'no-nonoctal-decimal-escape': 'off',
+    'no-nonoctal-decimal-escape': 'error',
 
     // disallow use of (old style) octal literals
     // https://eslint.org/docs/rules/no-octal
@@ -271,9 +266,9 @@ module.exports = {
     'no-proto': 'error',
 
     // disallow declaring the same variable more than once
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redeclare.md
+    // https://eslint.org/docs/rules/no-redeclare
     'no-redeclare': 'off',
-    '@typescript-eslint/no-redeclare': ['error'],
+    '@typescript-eslint/no-redeclare': 'error',
 
     // disallow certain object properties
     // https://eslint.org/docs/rules/no-restricted-properties
@@ -334,8 +329,8 @@ module.exports = {
     'no-return-assign': ['error', 'always'],
 
     // disallow redundant `return await`
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
-    'no-return-await': 'error',
+    // https://eslint.org/docs/rules/no-return-await
+    'no-return-await': 'off',
     '@typescript-eslint/return-await': 'error',
 
     // disallow use of `javascript:` urls.
@@ -368,7 +363,7 @@ module.exports = {
     'no-unmodified-loop-condition': 'off',
 
     // disallow usage of expressions in statement position
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-expressions.md
+    // https://eslint.org/docs/rules/no-unused-expressions
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error',
@@ -427,15 +422,19 @@ module.exports = {
     'prefer-named-capture-group': 'off',
 
     // https://eslint.org/docs/rules/prefer-regex-literals
-    // TODO; enable, semver-minor, once eslint v6.4 is required (which is a major)
-    'prefer-regex-literals': 'off',
+    'prefer-regex-literals': [
+      'error',
+      {
+        disallowRedundantWrapping: true,
+      },
+    ],
 
     // require use of the second argument for parseInt()
     // https://eslint.org/docs/rules/radix
     radix: 'error',
 
     // require `await` in `async function` (note: this is a horrible rule that should never be used)
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
+    // https://eslint.org/docs/rules/require-await
     'require-await': 'off',
     '@typescript-eslint/require-await': 'off',
 

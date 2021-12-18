@@ -57,9 +57,6 @@ module.exports = {
         imports: 'always-multiline',
         exports: 'always-multiline',
         functions: 'always-multiline',
-        enums: 'always-multiline',
-        generics: 'always-multiline',
-        tuples: 'always-multiline',
       },
     ],
 
@@ -101,8 +98,7 @@ module.exports = {
     'eol-last': ['error', 'always'],
 
     // https://eslint.org/docs/rules/function-call-argument-newline
-    // TODO: enable, semver-minor, once eslint v6.2 is required (which is a major)
-    'function-call-argument-newline': ['off', 'consistent'],
+    'function-call-argument-newline': ['error', 'consistent'],
 
     // enforce spacing between functions and their invocations
     // https://eslint.org/docs/rules/func-call-spacing
@@ -130,14 +126,9 @@ module.exports = {
     // TODO: enable
     'func-style': ['off', 'expression'],
 
-    // enforce consistent line breaks inside function parentheses
+    // require line breaks inside function parentheses if there are line breaks between parameters
     // https://eslint.org/docs/rules/function-paren-newline
-    'function-paren-newline': ['error', 'consistent'],
-
-    // Blacklist certain identifiers to prevent them being used
-    // https://eslint.org/docs/rules/id-blacklist
-    // TODO: semver-major, remove once eslint v7.4+ is required
-    'id-blacklist': 'off',
+    'function-paren-newline': ['error', 'multiline-arguments'],
 
     // disallow specified identifiers
     // https://eslint.org/docs/rules/id-denylist
@@ -155,6 +146,7 @@ module.exports = {
     'implicit-arrow-linebreak': ['error', 'beside'],
 
     // this option sets a specific tab width for your code
+    // https://eslint.org/docs/rules/indent
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
     indent: 'off',
     '@typescript-eslint/indent': [
@@ -242,7 +234,7 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
 
     // require or disallow an empty line between class members
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/lines-between-class-members.md
+    // https://eslint.org/docs/rules/lines-between-class-members
     'lines-between-class-members': 'off',
     '@typescript-eslint/lines-between-class-members': [
       'error',
@@ -358,7 +350,7 @@ module.exports = {
 
     // disallow use of the Array constructor
     'no-array-constructor': 'off',
-    '@typescript-eslint/no-array-constructor': ['error'],
+    '@typescript-eslint/no-array-constructor': 'error',
 
     // disallow use of bitwise operators
     // https://eslint.org/docs/rules/no-bitwise
@@ -562,8 +554,7 @@ module.exports = {
 
     // Disallow the use of Math.pow in favor of the ** operator
     // https://eslint.org/docs/rules/prefer-exponentiation-operator
-    // TODO: enable, semver-major when eslint 5 is dropped
-    'prefer-exponentiation-operator': 'off',
+    'prefer-exponentiation-operator': 'error',
 
     // Prefer use of an object spread over Object.assign
     // https://eslint.org/docs/rules/prefer-object-spread
@@ -606,7 +597,7 @@ module.exports = {
     'space-before-blocks': 'error',
 
     // require or disallow space before function opening parenthesis
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.md
+    // https://eslint.org/docs/rules/space-before-function-paren
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': [
       'error',
@@ -622,7 +613,7 @@ module.exports = {
 
     // require spaces around operators
     'space-infix-ops': 'off',
-    '@typescript-eslint/space-infix-ops': ['error'],
+    '@typescript-eslint/space-infix-ops': 'error',
 
     // Require or disallow spaces before/after unary operators
     // https://eslint.org/docs/rules/space-unary-ops

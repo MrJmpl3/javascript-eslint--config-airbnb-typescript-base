@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires,import/no-unresolved,@typescript-eslint/no-unsafe-assignment
 const confusingBrowserGlobals = require('confusing-browser-globals');
 
 module.exports = {
@@ -30,11 +29,12 @@ module.exports = {
         message:
           'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
       },
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     ].concat(confusingBrowserGlobals),
 
     // disallow declaration of variables already declared in the outer scope
     'no-shadow': 'off',
-    '@typescript-eslint/no-shadow': ['error'],
+    '@typescript-eslint/no-shadow': 'error',
 
     // disallow shadowing of names such as arguments
     'no-shadow-restricted-names': 'error',
