@@ -19,7 +19,7 @@ module.exports = {
       node: {
         extensions: ['.mjs', '.js', '.json', '.ts', '.d.ts'],
       },
-      ts: {
+      typescript: {
         alwaysTryTypes: true,
       },
       // webpack: {
