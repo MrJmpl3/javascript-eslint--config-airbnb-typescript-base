@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-airbnb-typescript-base",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Airbnb Base Typescript config",
   "license": "MIT",
   "author": "José Manuel Casani Guerra <jmpl3.soporte@gmail.com>",
