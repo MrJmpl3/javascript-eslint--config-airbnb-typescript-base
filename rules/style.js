@@ -26,7 +26,7 @@ module.exports = {
     ],
 
     // require camel case names
-    camelcase: ['error', { properties: 'never', ignoreDestructuring: false }],
+    camelcase: 'off',
 
     // enforce or disallow capitalization of the first letter of a comment
     // https://eslint.org/docs/rules/capitalized-comments
@@ -57,6 +57,9 @@ module.exports = {
         imports: 'always-multiline',
         exports: 'always-multiline',
         functions: 'always-multiline',
+        enums: 'always-multiline',
+        generics: 'always-multiline',
+        tuples: 'always-multiline',
       },
     ],
 
@@ -594,7 +597,8 @@ module.exports = {
     'sort-vars': 'off',
 
     // require or disallow space before blocks
-    'space-before-blocks': 'error',
+    'space-before-blocks': 'off',
+    '@typescript-eslint/space-before-blocks': 'error',
 
     // require or disallow space before function opening parenthesis
     // https://eslint.org/docs/rules/space-before-function-paren

@@ -219,7 +219,7 @@ module.exports = {
 
     // disallow use of new operator for Function object
     // https://eslint.org/docs/rules/no-new-func
-    'no-new-func': 'error',
+    'no-new-func': 'off',
 
     // disallows creating new instances of String, Number, and Boolean
     // https://eslint.org/docs/rules/no-new-wrappers
@@ -331,7 +331,7 @@ module.exports = {
     // disallow redundant `return await`
     // https://eslint.org/docs/rules/no-return-await
     'no-return-await': 'off',
-    '@typescript-eslint/return-await': 'error',
+    '@typescript-eslint/return-await': 'off',
 
     // disallow use of `javascript:` urls.
     // https://eslint.org/docs/rules/no-script-url
@@ -420,6 +420,11 @@ module.exports = {
     // Suggest using named capture group in regular expression
     // https://eslint.org/docs/rules/prefer-named-capture-group
     'prefer-named-capture-group': 'off',
+
+    // Prefer Object.hasOwn() over Object.prototype.hasOwnProperty.call()
+    // https://eslint.org/docs/rules/prefer-object-has-own
+    // TODO: semver-major: enable thus rule, once eslint v8.5.0 is required
+    'prefer-object-has-own': 'off',
 
     // https://eslint.org/docs/rules/prefer-regex-literals
     'prefer-regex-literals': [
