@@ -43,7 +43,7 @@ module.exports = {
 
     // https://eslint.org/docs/rules/default-param-last
     'default-param-last': 'off',
-    '@typescript-eslint/default-param-last': 'off',
+    '@typescript-eslint/default-param-last': 'error',
 
     // encourages use of dot notation whenever possible
     // https://eslint.org/docs/rules/dot-notation
@@ -219,7 +219,7 @@ module.exports = {
 
     // disallow use of new operator for Function object
     // https://eslint.org/docs/rules/no-new-func
-    'no-new-func': 'off',
+    'no-new-func': 'error',
 
     // disallows creating new instances of String, Number, and Boolean
     // https://eslint.org/docs/rules/no-new-wrappers
@@ -357,6 +357,7 @@ module.exports = {
     // restrict what can be thrown as an exception
     // https://eslint.org/docs/rules/no-throw-literal
     'no-throw-literal': 'off',
+    '@typescript-eslint/no-throw-literal': 'off',
 
     // disallow unmodified conditions of loops
     // https://eslint.org/docs/rules/no-unmodified-loop-condition

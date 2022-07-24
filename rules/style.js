@@ -26,7 +26,7 @@ module.exports = {
     ],
 
     // require camel case names
-    camelcase: 'off',
+    camelcase: ['error', { properties: 'never', ignoreDestructuring: false }],
 
     // enforce or disallow capitalization of the first letter of a comment
     // https://eslint.org/docs/rules/capitalized-comments
@@ -150,7 +150,6 @@ module.exports = {
 
     // this option sets a specific tab width for your code
     // https://eslint.org/docs/rules/indent
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
     indent: 'off',
     '@typescript-eslint/indent': [
       'error',

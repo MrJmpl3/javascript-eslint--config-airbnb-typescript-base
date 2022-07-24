@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/unbound-method
 const { resolve } = require('path');
 
 module.exports = {

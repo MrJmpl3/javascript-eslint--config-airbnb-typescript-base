@@ -63,7 +63,7 @@ module.exports = {
           '**/protractor.conf.{js,ts}', // protractor config
           '**/protractor.conf.*.{js,ts}', // protractor config
           '**/karma.conf.{js,ts}', // karma config
-          '**/.eslintrc.js', // eslint config
+          '**/.eslintrc.{js,ts}', // eslint config
         ],
         optionalDependencies: false,
       },
@@ -117,8 +117,6 @@ module.exports = {
         js: 'never',
         mjs: 'never',
         jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
       },
     ],
 
@@ -129,14 +127,16 @@ module.exports = {
       'error',
       {
         groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-          'object',
-          'type',
+          [
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+            'object',
+            'type',
+          ],
         ],
         alphabetize: {
           order: 'asc',
