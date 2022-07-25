@@ -129,16 +129,14 @@ module.exports = {
       'error',
       {
         groups: [
-          [
-            'builtin',
-            'external',
-            'internal',
-            'parent',
-            'sibling',
-            'index',
-            'object',
-            'type',
-          ],
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+          'type',
         ],
         alphabetize: {
           order: 'asc',
