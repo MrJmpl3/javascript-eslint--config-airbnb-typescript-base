@@ -2,7 +2,6 @@ module.exports = {
   rules: {
     // enforces no braces where they can be omitted
     // https://eslint.org/docs/rules/arrow-body-style
-    // TODO: enable requireReturnForObjectLiteral?
     'arrow-body-style': [
       'error',
       'as-needed',
@@ -42,16 +41,15 @@ module.exports = {
     // disallow modifying variables that are declared using const
     'no-const-assign': 'error',
 
-    // disallow duplicate class members
-    // https://eslint.org/docs/rules/no-dupe-class-members
+    // Replace Airbnb 'no-dupe-class-members' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dupe-class-members.md
     'no-dupe-class-members': 'off',
     '@typescript-eslint/no-dupe-class-members': 'error',
 
     // disallow importing from the same path more than once
     // https://eslint.org/docs/rules/no-duplicate-imports
-    // replaced by https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
+    // replaced by https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
     'no-duplicate-imports': 'off',
-    '@typescript-eslint/no-duplicate-imports': 'off',
 
     // disallow symbol constructor
     // https://eslint.org/docs/rules/no-new-symbol
@@ -87,8 +85,8 @@ module.exports = {
     // https://eslint.org/docs/rules/no-useless-computed-key
     'no-useless-computed-key': 'error',
 
-    // disallow unnecessary constructor
-    // https://eslint.org/docs/rules/no-useless-constructor
+    // Replace Airbnb 'no-useless-constructor' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
 

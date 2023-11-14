@@ -41,12 +41,13 @@ module.exports = {
     // https://eslint.org/docs/rules/default-case-last
     'default-case-last': 'error',
 
-    // https://eslint.org/docs/rules/default-param-last
+    // Replace Airbnb 'default-param-last' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/default-param-last.md
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
 
-    // encourages use of dot notation whenever possible
-    // https://eslint.org/docs/rules/dot-notation
+    // Replace Airbnb 'dot-notation' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/dot-notation.md
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': 'off',
 
@@ -94,8 +95,8 @@ module.exports = {
     // https://eslint.org/docs/rules/no-else-return
     'no-else-return': ['error', { allowElseIf: false }],
 
-    // disallow empty functions, except for standalone funcs/arrows
-    // https://eslint.org/docs/rules/no-empty-function
+    // Replace Airbnb 'no-empty-function' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': [
       'error',
@@ -107,6 +108,10 @@ module.exports = {
     // disallow empty destructuring patterns
     // https://eslint.org/docs/rules/no-empty-pattern
     'no-empty-pattern': 'error',
+
+    // Disallow empty static blocks
+    // https://eslint.org/docs/latest/rules/no-empty-static-block
+    'no-empty-static-block': 'off',
 
     // disallow comparisons to null without a type-checking operator
     // https://eslint.org/docs/rules/no-eq-null
@@ -160,9 +165,10 @@ module.exports = {
     // https://eslint.org/docs/rules/no-implicit-globals
     'no-implicit-globals': 'off',
 
-    // disallow use of eval()-like methods
-    // https://eslint.org/docs/rules/no-implied-eval
+    // Replace Airbnb 'no-implied-eval' and 'no-new-func' rules with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-implied-eval.md
     'no-implied-eval': 'off',
+    'no-new-func': 'off',
     '@typescript-eslint/no-implied-eval': 'off',
 
     // disallow this keywords outside of classes or class-like objects
@@ -182,13 +188,13 @@ module.exports = {
     // https://eslint.org/docs/rules/no-lone-blocks
     'no-lone-blocks': 'error',
 
-    // disallow creation of functions within loops
-    // https://eslint.org/docs/rules/no-loop-func
+    // Replace Airbnb 'no-loop-func' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loop-func.md
     'no-loop-func': 'off',
     '@typescript-eslint/no-loop-func': 'error',
 
-    // disallow magic numbers
-    // https://eslint.org/docs/rules/no-magic-numbers
+    // Replace Airbnb 'no-magic-numbers' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
     'no-magic-numbers': 'off',
     '@typescript-eslint/no-magic-numbers': [
       'off',
@@ -216,10 +222,6 @@ module.exports = {
     // disallow use of new operator when not part of the assignment or comparison
     // https://eslint.org/docs/rules/no-new
     'no-new': 'error',
-
-    // disallow use of new operator for Function object
-    // https://eslint.org/docs/rules/no-new-func
-    'no-new-func': 'error',
 
     // disallows creating new instances of String, Number, and Boolean
     // https://eslint.org/docs/rules/no-new-wrappers
@@ -265,8 +267,8 @@ module.exports = {
     // https://eslint.org/docs/rules/no-proto
     'no-proto': 'error',
 
-    // disallow declaring the same variable more than once
-    // https://eslint.org/docs/rules/no-redeclare
+    // Replace Airbnb 'no-redeclare' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redeclare.md
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
 
@@ -328,8 +330,8 @@ module.exports = {
     // https://eslint.org/docs/rules/no-return-assign
     'no-return-assign': ['error', 'always'],
 
-    // disallow redundant `return await`
-    // https://eslint.org/docs/rules/no-return-await
+    // Replace Airbnb 'no-return-await' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
     'no-return-await': 'off',
     '@typescript-eslint/return-await': 'off',
 
@@ -354,8 +356,8 @@ module.exports = {
     // https://eslint.org/docs/rules/no-sequences
     'no-sequences': 'error',
 
-    // restrict what can be thrown as an exception
-    // https://eslint.org/docs/rules/no-throw-literal
+    // Replace Airbnb 'no-throw-literal' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-throw-literal.md
     'no-throw-literal': 'off',
     '@typescript-eslint/no-throw-literal': 'off',
 
@@ -363,8 +365,8 @@ module.exports = {
     // https://eslint.org/docs/rules/no-unmodified-loop-condition
     'no-unmodified-loop-condition': 'off',
 
-    // disallow usage of expressions in statement position
-    // https://eslint.org/docs/rules/no-unused-expressions
+    // Replace Airbnb 'no-unused-expressions' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-expressions.md
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error',
@@ -424,7 +426,6 @@ module.exports = {
 
     // Prefer Object.hasOwn() over Object.prototype.hasOwnProperty.call()
     // https://eslint.org/docs/rules/prefer-object-has-own
-    // TODO: semver-major: enable thus rule, once eslint v8.5.0 is required
     'prefer-object-has-own': 'off',
 
     // https://eslint.org/docs/rules/prefer-regex-literals
@@ -439,8 +440,8 @@ module.exports = {
     // https://eslint.org/docs/rules/radix
     radix: 'error',
 
-    // require `await` in `async function` (note: this is a horrible rule that should never be used)
-    // https://eslint.org/docs/rules/require-await
+    // Replace Airbnb 'require-await' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
     'require-await': 'off',
     '@typescript-eslint/require-await': 'off',
 

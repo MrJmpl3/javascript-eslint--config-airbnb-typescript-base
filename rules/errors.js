@@ -66,8 +66,8 @@ module.exports = {
     // https://eslint.org/docs/rules/no-extra-boolean-cast
     'no-extra-boolean-cast': 'error',
 
-    // disallow unnecessary parentheses
-    // https://eslint.org/docs/rules/no-extra-parens
+    // Replace Airbnb 'no-extra-parens' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
     'no-extra-parens': 'off',
     '@typescript-eslint/no-extra-parens': [
       'off',
@@ -81,7 +81,8 @@ module.exports = {
       },
     ],
 
-    // disallow unnecessary semicolons
+    // Replace Airbnb 'no-extra-semi' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-semi.md
     'no-extra-semi': 'off',
     '@typescript-eslint/no-extra-semi': 'error',
 
@@ -100,8 +101,8 @@ module.exports = {
     // disallow irregular whitespace outside of strings and comments
     'no-irregular-whitespace': 'error',
 
-    // Disallow Number Literals That Lose Precision
-    // https://eslint.org/docs/rules/no-loss-of-precision
+    // Replace Airbnb 'no-loss-of-precision' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loss-of-precision.md
     'no-loss-of-precision': 'off',
     '@typescript-eslint/no-loss-of-precision': 'error',
 
@@ -111,6 +112,10 @@ module.exports = {
 
     // disallow the use of object properties of the global object (Math and JSON) as functions
     'no-obj-calls': 'error',
+
+    // Disallow new operators with global non-constructor functions
+    // https://eslint.org/docs/latest/rules/no-new-native-nonconstructor
+    'no-new-native-nonconstructor': 'off',
 
     // Disallow returning values from Promise executor functions
     // https://eslint.org/docs/rules/no-promise-executor-return
@@ -167,7 +172,6 @@ module.exports = {
 
     // Disallow Unused Private Class Members
     // https://eslint.org/docs/rules/no-unused-private-class-members
-    // TODO: enable once eslint 7 is dropped (which is semver-major)
     'no-unused-private-class-members': 'off',
 
     // Disallow useless backreferences in regular expressions

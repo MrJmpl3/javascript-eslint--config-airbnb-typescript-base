@@ -1,7 +1,6 @@
 /.idea
 /vscode
 /.husky
-/.yarn
 /node_modules
 .editorconfig
 .eslintignore
@@ -9,7 +8,5 @@
 .gitignore
 .npmignore
 .prettierrc.js
-.yarnrc.yml
 commitlint.config.js
 tsconfig.json
-yarn.lock
