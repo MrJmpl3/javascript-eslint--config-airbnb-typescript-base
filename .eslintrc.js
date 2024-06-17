@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/unbound-method
 const { resolve } = require('path');
 
 module.exports = {
@@ -7,11 +6,8 @@ module.exports = {
     project: resolve(__dirname, './tsconfig.json'),
     tsconfigRootDir: __dirname,
   },
-  extends: [require.resolve('./index'), 'prettier'],
+  extends: [require.resolve('./without-ts-type-checking'), 'prettier'],
   rules: {
-    '@typescript-eslint/no-unsafe-call': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/no-var-requires': 'off',
   },
 };

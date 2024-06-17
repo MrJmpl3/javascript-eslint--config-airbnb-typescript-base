@@ -42,12 +42,12 @@ module.exports = {
     'default-case-last': 'error',
 
     // Replace Airbnb 'default-param-last' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/default-param-last.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/default-param-last.mdx
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
 
     // Replace Airbnb 'dot-notation' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/dot-notation.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/dot-notation.mdx
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': 'off',
 
@@ -96,7 +96,7 @@ module.exports = {
     'no-else-return': ['error', { allowElseIf: false }],
 
     // Replace Airbnb 'no-empty-function' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-function.mdx
     'no-empty-function': 'off',
     '@typescript-eslint/no-empty-function': [
       'error',
@@ -166,7 +166,7 @@ module.exports = {
     'no-implicit-globals': 'off',
 
     // Replace Airbnb 'no-implied-eval' and 'no-new-func' rules with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-implied-eval.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-implied-eval.mdx
     'no-implied-eval': 'off',
     'no-new-func': 'off',
     '@typescript-eslint/no-implied-eval': 'off',
@@ -189,12 +189,12 @@ module.exports = {
     'no-lone-blocks': 'error',
 
     // Replace Airbnb 'no-loop-func' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loop-func.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loop-func.mdx
     'no-loop-func': 'off',
     '@typescript-eslint/no-loop-func': 'error',
 
     // Replace Airbnb 'no-magic-numbers' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-magic-numbers.mdx
     'no-magic-numbers': 'off',
     '@typescript-eslint/no-magic-numbers': [
       'off',
@@ -230,6 +230,10 @@ module.exports = {
     // Disallow \8 and \9 escape sequences in string literals
     // https://eslint.org/docs/rules/no-nonoctal-decimal-escape
     'no-nonoctal-decimal-escape': 'error',
+
+    // Disallow calls to the Object constructor without an argument
+    // https://eslint.org/docs/latest/rules/no-object-constructor
+    'no-object-constructor': 'off',
 
     // disallow use of (old style) octal literals
     // https://eslint.org/docs/rules/no-octal
@@ -268,7 +272,7 @@ module.exports = {
     'no-proto': 'error',
 
     // Replace Airbnb 'no-redeclare' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redeclare.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-redeclare.mdx
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
 
@@ -331,7 +335,7 @@ module.exports = {
     'no-return-assign': ['error', 'always'],
 
     // Replace Airbnb 'no-return-await' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.mdx
     'no-return-await': 'off',
     '@typescript-eslint/return-await': 'off',
 
@@ -357,7 +361,7 @@ module.exports = {
     'no-sequences': 'error',
 
     // Replace Airbnb 'no-throw-literal' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-throw-literal.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-throw-literal.mdx
     'no-throw-literal': 'off',
     '@typescript-eslint/no-throw-literal': 'off',
 
@@ -366,7 +370,7 @@ module.exports = {
     'no-unmodified-loop-condition': 'off',
 
     // Replace Airbnb 'no-unused-expressions' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-expressions.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-expressions.mdx
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-expressions': [
       'error',
@@ -441,7 +445,7 @@ module.exports = {
     radix: 'error',
 
     // Replace Airbnb 'require-await' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.mdx
     'require-await': 'off',
     '@typescript-eslint/require-await': 'off',
 

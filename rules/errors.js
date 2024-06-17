@@ -28,7 +28,6 @@ module.exports = {
 
     // Disallows expressions where the operation doesn't affect the value
     // https://eslint.org/docs/rules/no-constant-binary-expression
-    // TODO: semver-major, enable
     'no-constant-binary-expression': 'off',
 
     // disallow use of constant expressions in conditions
@@ -67,7 +66,7 @@ module.exports = {
     'no-extra-boolean-cast': 'error',
 
     // Replace Airbnb 'no-extra-parens' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.mdx
     'no-extra-parens': 'off',
     '@typescript-eslint/no-extra-parens': [
       'off',
@@ -82,7 +81,7 @@ module.exports = {
     ],
 
     // Replace Airbnb 'no-extra-semi' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-semi.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-semi.mdx
     'no-extra-semi': 'off',
     '@typescript-eslint/no-extra-semi': 'error',
 
@@ -102,7 +101,7 @@ module.exports = {
     'no-irregular-whitespace': 'error',
 
     // Replace Airbnb 'no-loss-of-precision' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loss-of-precision.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loss-of-precision.mdx
     'no-loss-of-precision': 'off',
     '@typescript-eslint/no-loss-of-precision': 'error',
 

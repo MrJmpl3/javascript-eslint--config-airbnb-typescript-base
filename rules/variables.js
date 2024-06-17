@@ -36,7 +36,7 @@ module.exports = {
     ),
 
     // Replace Airbnb 'no-shadow' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-shadow.mdx
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
 
@@ -54,7 +54,7 @@ module.exports = {
     'no-undefined': 'off',
 
     // Replace Airbnb 'no-unused-vars' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.mdx
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
@@ -62,7 +62,7 @@ module.exports = {
     ],
 
     // Replace Airbnb 'no-use-before-define' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.mdx
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
       'error',

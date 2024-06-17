@@ -42,7 +42,7 @@ module.exports = {
     'no-const-assign': 'error',
 
     // Replace Airbnb 'no-dupe-class-members' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dupe-class-members.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-dupe-class-members.mdx
     'no-dupe-class-members': 'off',
     '@typescript-eslint/no-dupe-class-members': 'error',
 
@@ -86,7 +86,7 @@ module.exports = {
     'no-useless-computed-key': 'error',
 
     // Replace Airbnb 'no-useless-constructor' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.mdx
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
 
