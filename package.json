@@ -1,39 +1,43 @@
 {
   "name": "eslint-config-airbnb-typescript-base",
-  "version": "6.0.1",
+  "version": "7.0.0-alpha.1",
   "description": "Airbnb Base Typescript config",
   "license": "MIT",
   "author": "José Manuel Casani Guerra <jmpl3.soporte@gmail.com>",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "format": "npm run format:package && npm run format:prettier && npm run format:eslint",
+    "format": "pnpm run format:package && pnpm run format:prettier && pnpm run format:eslint",
     "format:eslint": "eslint --fix ./",
     "format:package": "prettier-package-json --write",
     "format:prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
     "lint": "eslint ./",
-    "validate": "npm run lint"
+    "prepare": "husky",
+    "print:eslint": "eslint --print-config eslint.config.mjs",
+    "validate": "pnpm run lint"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.13.1",
-    "@typescript-eslint/parser": "^7.13.1",
+    "@stylistic/eslint-plugin": "^3.1.0",
     "confusing-browser-globals": "^1.0.11",
-    "eslint": "^8.57.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-import-resolver-webpack": "^0.13.8",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-typescript-sort-keys": "^3.2.0",
-    "typescript": "^5.4.5"
+    "eslint": "^9.20.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-perfectionist": "^4.8.0",
+    "globals": "^15.14.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.23.0"
   },
   "devDependencies": {
-    "commitlint": "^19.3.0",
+    "@commitlint/cli": "^19.7.1",
     "commitlint-config-gitmoji": "^2.3.1",
-    "eslint-config-prettier": "^9.1.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.7",
-    "prettier": "^3.3.2",
+    "eslint-config-prettier": "^10.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.4.2",
     "prettier-package-json": "^2.8.0"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint"
-  }
+  },
+  "packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d"
 }

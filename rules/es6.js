@@ -1,4 +1,7 @@
-module.exports = {
+/* eslint-disable perfectionist/sort-objects */
+import * as tseslint from 'typescript-eslint';
+
+export default tseslint.config({
   rules: {
     // enforces no braces where they can be omitted
     // https://eslint.org/docs/rules/arrow-body-style
@@ -12,18 +15,21 @@ module.exports = {
 
     // require parens in arrow function arguments
     // https://eslint.org/docs/rules/arrow-parens
-    'arrow-parens': ['error', 'always'],
+    '@stylistic/arrow-parens': ['error', 'always'],
 
     // require space before/after arrow function's arrow
     // https://eslint.org/docs/rules/arrow-spacing
-    'arrow-spacing': ['error', { before: true, after: true }],
+    '@stylistic/arrow-spacing': ['error', { after: true, before: true }],
 
     // verify super() callings in constructors
     'constructor-super': 'error',
 
     // enforce the spacing around the * in generator functions
     // https://eslint.org/docs/rules/generator-star-spacing
-    'generator-star-spacing': ['error', { before: false, after: true }],
+    '@stylistic/generator-star-spacing': [
+      'error',
+      { after: true, before: false },
+    ],
 
     // disallow modifying variables of class declarations
     // https://eslint.org/docs/rules/no-class-assign
@@ -31,7 +37,7 @@ module.exports = {
 
     // disallow arrow functions where they could be confused with comparisons
     // https://eslint.org/docs/rules/no-confusing-arrow
-    'no-confusing-arrow': [
+    '@stylistic/no-confusing-arrow': [
       'error',
       {
         allowParens: true,
@@ -52,8 +58,8 @@ module.exports = {
     'no-duplicate-imports': 'off',
 
     // disallow symbol constructor
-    // https://eslint.org/docs/rules/no-new-symbol
-    'no-new-symbol': 'error',
+    // https://eslint.org/docs/rules/no-new-native-nonconstructor
+    'no-new-native-nonconstructor': 'error',
 
     // Disallow specified names in exports
     // https://eslint.org/docs/rules/no-restricted-exports
@@ -156,10 +162,6 @@ module.exports = {
     // https://eslint.org/docs/rules/prefer-numeric-literals
     'prefer-numeric-literals': 'error',
 
-    // suggest using Reflect methods where applicable
-    // https://eslint.org/docs/rules/prefer-reflect
-    'prefer-reflect': 'off',
-
     // use rest parameters instead of arguments
     // https://eslint.org/docs/rules/prefer-rest-params
     'prefer-rest-params': 'error',
@@ -178,7 +180,7 @@ module.exports = {
 
     // enforce spacing between object rest-spread
     // https://eslint.org/docs/rules/rest-spread-spacing
-    'rest-spread-spacing': ['error', 'never'],
+    '@stylistic/rest-spread-spacing': ['error', 'never'],
 
     // import sorting
     // https://eslint.org/docs/rules/sort-imports
@@ -198,10 +200,10 @@ module.exports = {
 
     // enforce usage of spacing in template strings
     // https://eslint.org/docs/rules/template-curly-spacing
-    'template-curly-spacing': 'error',
+    '@stylistic/template-curly-spacing': 'error',
 
     // enforce spacing around the * in yield* expressions
     // https://eslint.org/docs/rules/yield-star-spacing
-    'yield-star-spacing': ['error', 'after'],
+    '@stylistic/yield-star-spacing': ['error', 'after'],
   },
-};
+});

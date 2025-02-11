@@ -1,7 +1,8 @@
-module.exports = {
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/stylistic',
-    require.resolve('./shared'),
-  ],
-};
+/* eslint-disable import/extensions */
+import * as tseslint from 'typescript-eslint';
+
+import shared from './shared.js';
+
+export default tseslint.config({
+  extends: [tseslint.configs.recommended, tseslint.configs.stylistic, shared],
+});

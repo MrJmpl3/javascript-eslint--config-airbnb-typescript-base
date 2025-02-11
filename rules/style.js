@@ -1,49 +1,48 @@
-module.exports = {
+/* eslint-disable perfectionist/sort-objects */
+import * as tseslint from 'typescript-eslint';
+
+export default tseslint.config({
   rules: {
     // enforce line breaks after opening and before closing array brackets
     // https://eslint.org/docs/rules/array-bracket-newline
-    'array-bracket-newline': ['off', 'consistent'], // object option alternative: { multiline: true, minItems: 3 }
+    '@stylistic/array-bracket-newline': ['off', 'consistent'], // object option alternative: { multiline: true, minItems: 3 }
 
     // enforce line breaks between array elements
     // https://eslint.org/docs/rules/array-element-newline
-    'array-element-newline': ['off', { multiline: true, minItems: 3 }],
+    '@stylistic/array-element-newline': [
+      'off',
+      { multiline: true, minItems: 3 },
+    ],
 
     // enforce spacing inside array brackets
-    'array-bracket-spacing': ['error', 'never'],
+    '@stylistic/array-bracket-spacing': ['error', 'never'],
 
     // enforce spacing inside single-line blocks
     // https://eslint.org/docs/rules/block-spacing
-    'block-spacing': ['error', 'always'],
+    '@stylistic/block-spacing': ['error', 'always'],
 
     // Replace Airbnb 'brace-style' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/brace-style.mdx
-    'brace-style': 'off',
-    '@typescript-eslint/brace-style': [
-      'error',
-      '1tbs',
-      { allowSingleLine: true },
-    ],
+    '@stylistic/brace-style': ['error', '1tbs', { allowSingleLine: true }],
 
     // Replace Airbnb 'camelcase' rule with '@typescript-eslint/naming-convention'
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.mdx
     camelcase: 'off',
+
     // The `@typescript-eslint/naming-convention` rule allows `leadingUnderscore` and `trailingUnderscore` settings. However, the existing `no-underscore-dangle` rule already takes care of this.
     '@typescript-eslint/naming-convention': [
       'error',
-      // Allow camelCase variables (23.2), PascalCase variables (23.8), and UPPER_CASE variables (23.10)
       {
-        selector: 'variable',
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        selector: 'variable',
       },
-      // Allow camelCase functions (23.2), and PascalCase functions (23.8)
       {
-        selector: 'function',
         format: ['camelCase', 'PascalCase'],
+        selector: 'function',
       },
-      // Airbnb recommends PascalCase for classes (23.3), and although Airbnb does not make TypeScript recommendations, we are assuming this rule would similarly apply to anything "type like", including interfaces, type aliases, and enums
       {
-        selector: 'typeLike',
         format: ['PascalCase'],
+        selector: 'typeLike',
       },
     ],
 
@@ -69,8 +68,7 @@ module.exports = {
     // Replace Airbnb 'comma-dangle' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-dangle.mdx
     // The TypeScript version also adds 3 new options, all of which should be set to the same value as the base config
-    'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': [
+    '@stylistic/comma-dangle': [
       'error',
       {
         arrays: 'always-multiline',
@@ -86,14 +84,10 @@ module.exports = {
 
     // Replace Airbnb 'comma-spacing' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.mdz
-    'comma-spacing': 'off',
-    '@typescript-eslint/comma-spacing': [
-      'error',
-      { before: false, after: true },
-    ],
+    '@stylistic/comma-spacing': ['error', { after: true, before: false }],
 
     // enforce one true comma style
-    'comma-style': [
+    '@stylistic/comma-style': [
       'error',
       'last',
       {
@@ -120,15 +114,14 @@ module.exports = {
     'consistent-this': 'off',
 
     // enforce newline at the end of file, with no multiple empty lines
-    'eol-last': ['error', 'always'],
+    '@stylistic/eol-last': ['error', 'always'],
 
     // https://eslint.org/docs/rules/function-call-argument-newline
-    'function-call-argument-newline': ['error', 'consistent'],
+    '@stylistic/function-call-argument-newline': ['error', 'consistent'],
 
     // Replace Airbnb 'func-call-spacing' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/func-call-spacing.mdx
-    'func-call-spacing': 'off',
-    '@typescript-eslint/func-call-spacing': ['error', 'never'],
+    '@stylistic/func-call-spacing': ['error', 'never'],
 
     // requires function names to match the name of the variable or property to which they are
     // assigned
@@ -152,7 +145,7 @@ module.exports = {
 
     // require line breaks inside function parentheses if there are line breaks between parameters
     // https://eslint.org/docs/rules/function-paren-newline
-    'function-paren-newline': ['error', 'multiline-arguments'],
+    '@stylistic/function-paren-newline': ['error', 'multiline-arguments'],
 
     // disallow specified identifiers
     // https://eslint.org/docs/rules/id-denylist
@@ -167,12 +160,11 @@ module.exports = {
 
     // Enforce the location of arrow function bodies with implicit returns
     // https://eslint.org/docs/rules/implicit-arrow-linebreak
-    'implicit-arrow-linebreak': ['error', 'beside'],
+    '@stylistic/implicit-arrow-linebreak': ['error', 'beside'],
 
     // Replace Airbnb 'indent' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.mdx
-    indent: 'off',
-    '@typescript-eslint/indent': [
+    '@stylistic/indent': [
       'error',
       2,
       {
@@ -220,15 +212,17 @@ module.exports = {
 
     // specify whether double or single quotes should be used in JSX attributes
     // https://eslint.org/docs/rules/jsx-quotes
-    'jsx-quotes': ['off', 'prefer-double'],
+    '@stylistic/jsx-quotes': ['off', 'prefer-double'],
 
     // enforces spacing between keys and values in object literal properties
-    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    '@stylistic/key-spacing': [
+      'error',
+      { beforeColon: false, afterColon: true },
+    ],
 
     // Replace Airbnb 'keyword-spacing' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/keyword-spacing.mdx
-    'keyword-spacing': 'off',
-    '@typescript-eslint/keyword-spacing': [
+    '@stylistic/keyword-spacing': [
       'error',
       {
         before: true,
@@ -243,30 +237,29 @@ module.exports = {
 
     // enforce position of line comments
     // https://eslint.org/docs/rules/line-comment-position
-    'line-comment-position': [
+    '@stylistic/line-comment-position': [
       'off',
       {
-        position: 'above',
-        ignorePattern: '',
         applyDefaultPatterns: true,
+        ignorePattern: '',
+        position: 'above',
       },
     ],
 
     // disallow mixed 'LF' and 'CRLF' as linebreaks
     // https://eslint.org/docs/rules/linebreak-style
-    'linebreak-style': ['error', 'unix'],
+    '@stylistic/linebreak-style': ['error', 'unix'],
 
     // Replace Airbnb 'lines-between-class-members' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/lines-between-class-members.mdx
-    'lines-between-class-members': 'off',
-    '@typescript-eslint/lines-between-class-members': [
+    '@stylistic/lines-between-class-members': [
       'error',
       'always',
       { exceptAfterSingleLine: false },
     ],
 
     // enforces empty lines around comments
-    'lines-around-comment': 'off',
+    '@stylistic/lines-around-comment': 'off',
 
     // require or disallow newlines around directives
     // https://eslint.org/docs/rules/lines-around-directive
@@ -293,7 +286,7 @@ module.exports = {
 
     // specify the maximum length of a line in your program
     // https://eslint.org/docs/rules/max-len
-    'max-len': [
+    '@stylistic/max-len': [
       'error',
       100,
       2,
@@ -340,15 +333,15 @@ module.exports = {
 
     // restrict the number of statements per line
     // https://eslint.org/docs/rules/max-statements-per-line
-    'max-statements-per-line': ['off', { max: 1 }],
+    '@stylistic/max-statements-per-line': ['off', { max: 1 }],
 
     // enforce a particular style for multiline comments
     // https://eslint.org/docs/rules/multiline-comment-style
-    'multiline-comment-style': ['off', 'starred-block'],
+    '@stylistic/multiline-comment-style': ['off', 'starred-block'],
 
     // require multiline ternary
     // https://eslint.org/docs/rules/multiline-ternary
-    'multiline-ternary': ['off', 'never'],
+    '@stylistic/multiline-ternary': ['off', 'never'],
 
     // require a capital letter for constructors
     'new-cap': [
@@ -367,7 +360,7 @@ module.exports = {
 
     // disallow the omission of parentheses when invoking a constructor with no arguments
     // https://eslint.org/docs/rules/new-parens
-    'new-parens': 'error',
+    '@stylistic/new-parens': 'error',
 
     // allow/disallow an empty newline after var statement
     'newline-after-var': 'off',
@@ -378,7 +371,10 @@ module.exports = {
     // enforces new line after each method call in the chain to make it
     // more readable and easy to maintain
     // https://eslint.org/docs/rules/newline-per-chained-call
-    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
+    '@stylistic/newline-per-chained-call': [
+      'error',
+      { ignoreChainWithDepth: 4 },
+    ],
 
     // Replace Airbnb 'no-array-constructor' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.mdx
@@ -402,7 +398,7 @@ module.exports = {
 
     // disallow un-paren'd mixes of different operators
     // https://eslint.org/docs/rules/no-mixed-operators
-    'no-mixed-operators': [
+    '@stylistic/no-mixed-operators': [
       'error',
       {
         // the list of arithmetic groups disallows mixing `%` and `**`
@@ -423,7 +419,7 @@ module.exports = {
     ],
 
     // disallow mixed spaces and tabs for indentation
-    'no-mixed-spaces-and-tabs': 'error',
+    '@stylistic/no-mixed-spaces-and-tabs': 'error',
 
     // disallow use of chained assignment expressions
     // https://eslint.org/docs/rules/no-multi-assign
@@ -431,7 +427,10 @@ module.exports = {
 
     // disallow multiple empty lines, only one newline at the end, and no new lines at the beginning
     // https://eslint.org/docs/rules/no-multiple-empty-lines
-    'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
+    '@stylistic/no-multiple-empty-lines': [
+      'error',
+      { max: 1, maxBOF: 0, maxEOF: 0 },
+    ],
 
     // disallow negated conditions
     // https://eslint.org/docs/rules/no-negated-condition
@@ -478,13 +477,13 @@ module.exports = {
     'no-spaced-func': 'off',
 
     // disallow tab characters entirely
-    'no-tabs': 'error',
+    '@stylistic/no-tabs': 'error',
 
     // disallow the use of ternary operators
     'no-ternary': 'off',
 
     // disallow trailing whitespace at the end of lines
-    'no-trailing-spaces': [
+    '@stylistic/no-trailing-spaces': [
       'error',
       {
         skipBlankLines: false,
@@ -511,20 +510,23 @@ module.exports = {
 
     // disallow whitespace before properties
     // https://eslint.org/docs/rules/no-whitespace-before-property
-    'no-whitespace-before-property': 'error',
+    '@stylistic/no-whitespace-before-property': 'error',
 
     // enforce the location of single-line statements
     // https://eslint.org/docs/rules/nonblock-statement-body-position
-    'nonblock-statement-body-position': ['error', 'beside', { overrides: {} }],
+    '@stylistic/nonblock-statement-body-position': [
+      'error',
+      'beside',
+      { overrides: {} },
+    ],
 
     // Replace Airbnb 'object-curly-spacing' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/object-curly-spacing.mdx
-    'object-curly-spacing': 'off',
-    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+    '@stylistic/object-curly-spacing': ['error', 'always'],
 
     // enforce line breaks between braces
     // https://eslint.org/docs/rules/object-curly-newline
-    'object-curly-newline': [
+    '@stylistic/object-curly-newline': [
       'error',
       {
         ObjectExpression: {
@@ -548,7 +550,7 @@ module.exports = {
 
     // enforce "same line" or "multiple line" on object properties.
     // https://eslint.org/docs/rules/object-property-newline
-    'object-property-newline': [
+    '@stylistic/object-property-newline': [
       'error',
       {
         allowAllPropertiesOnSameLine: true,
@@ -560,7 +562,7 @@ module.exports = {
 
     // require a newline around variable declaration
     // https://eslint.org/docs/rules/one-var-declaration-per-line
-    'one-var-declaration-per-line': ['error', 'always'],
+    '@stylistic/one-var-declaration-per-line': ['error', 'always'],
 
     // require assignment operator shorthand where possible or prohibit it entirely
     // https://eslint.org/docs/rules/operator-assignment
@@ -568,10 +570,14 @@ module.exports = {
 
     // Requires operator at the beginning of the line in multiline statements
     // https://eslint.org/docs/rules/operator-linebreak
-    'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
+    '@stylistic/operator-linebreak': [
+      'error',
+      'before',
+      { overrides: { '=': 'none' } },
+    ],
 
     // disallow padding within blocks
-    'padded-blocks': [
+    '@stylistic/padded-blocks': [
       'error',
       {
         blocks: 'never',
@@ -585,7 +591,7 @@ module.exports = {
 
     // Require or disallow padding lines between statements
     // https://eslint.org/docs/rules/padding-line-between-statements
-    'padding-line-between-statements': 'off',
+    '@stylistic/padding-line-between-statements': 'off',
 
     // Disallow the use of Math.pow in favor of the ** operator
     // https://eslint.org/docs/rules/prefer-exponentiation-operator
@@ -597,7 +603,7 @@ module.exports = {
 
     // require quotes around object literal property names
     // https://eslint.org/docs/rules/quote-props.html
-    'quote-props': [
+    '@stylistic/quote-props': [
       'error',
       'as-needed',
       { keywords: false, unnecessary: true, numbers: false },
@@ -605,8 +611,7 @@ module.exports = {
 
     // Replace Airbnb 'quotes' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/quotes.md
-    quotes: 'off',
-    '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }],
+    '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
 
     // do not require jsdoc
     // https://eslint.org/docs/rules/require-jsdoc
@@ -614,15 +619,14 @@ module.exports = {
 
     // Replace Airbnb 'semi' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/semi.mdx
-    semi: 'off',
-    '@typescript-eslint/semi': ['error', 'always'],
+    '@stylistic/semi': ['error', 'always'],
 
     // enforce spacing before and after semicolons
-    'semi-spacing': ['error', { before: false, after: true }],
+    '@stylistic/semi-spacing': ['error', { after: true, before: false }],
 
     // Enforce location of semicolons
     // https://eslint.org/docs/rules/semi-style
-    'semi-style': ['error', 'last'],
+    '@stylistic/semi-style': ['error', 'last'],
 
     // requires object keys to be sorted
     'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
@@ -632,43 +636,40 @@ module.exports = {
 
     // Replace Airbnb 'space-before-blocks' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-blocks.mdx
-    'space-before-blocks': 'off',
-    '@typescript-eslint/space-before-blocks': 'error',
+    '@stylistic/space-before-blocks': 'error',
 
     // Replace Airbnb 'space-before-function-paren' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-before-function-paren.mdx
-    'space-before-function-paren': 'off',
-    '@typescript-eslint/space-before-function-paren': [
+    '@stylistic/space-before-function-paren': [
       'error',
       {
         anonymous: 'always',
-        named: 'never',
         asyncArrow: 'always',
+        named: 'never',
       },
     ],
 
     // require or disallow spaces inside parentheses
-    'space-in-parens': ['error', 'never'],
+    '@stylistic/space-in-parens': ['error', 'never'],
 
     // Replace Airbnb 'space-infix-ops' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-infix-ops.mdx
-    'space-infix-ops': 'off',
-    '@typescript-eslint/space-infix-ops': 'error',
+    '@stylistic/space-infix-ops': 'error',
 
     // Require or disallow spaces before/after unary operators
     // https://eslint.org/docs/rules/space-unary-ops
-    'space-unary-ops': [
+    '@stylistic/space-unary-ops': [
       'error',
       {
-        words: true,
         nonwords: false,
         overrides: {},
+        words: true,
       },
     ],
 
     // require or disallow a space immediately following the // or /* in a comment
     // https://eslint.org/docs/rules/spaced-comment
-    'spaced-comment': [
+    '@stylistic/spaced-comment': [
       'error',
       'always',
       {
@@ -690,13 +691,13 @@ module.exports = {
 
     // Require or disallow spacing between template tags and their literals
     // https://eslint.org/docs/rules/template-tag-spacing
-    'template-tag-spacing': ['error', 'never'],
+    '@stylistic/template-tag-spacing': ['error', 'never'],
 
     // require or disallow the Unicode Byte Order Mark
     // https://eslint.org/docs/rules/unicode-bom
     'unicode-bom': ['error', 'never'],
 
     // require regex literals to be wrapped in parentheses
-    'wrap-regex': 'off',
+    '@stylistic/wrap-regex': 'off',
   },
-};
+});

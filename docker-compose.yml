@@ -1,0 +1,28 @@
+services:
+  workstation:
+    build:
+      context: ./docker/workstation
+      args:
+        - 'TZ=America/Lima'
+        - 'PUID=${DOCKER_PUID}'
+        - 'PGID=${DOCKER_PGID}'
+        - 'GIT_EMAIL=${DOCKER_GIT_EMAIL}'
+        - 'GIT_NAME=${DOCKER_GIT_NAME}'
+        - 'NODE_VERSION=${DOCKER_NODE_VERSION}'
+        - 'PNPM_VERSION=${DOCKER_PNPM_VERSION}'
+    environment:
+      - 'PUID=${DOCKER_PUID}'
+      - 'PGID=${DOCKER_PGID}'
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - '.:/var/www/node'
+    networks:
+      - recave
+    deploy:
+      resources:
+        limits:
+          memory: '1GB'
+networks:
+  recave:
+    driver: bridge
