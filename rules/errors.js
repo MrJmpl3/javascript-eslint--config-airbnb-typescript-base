@@ -1,4 +1,7 @@
-module.exports = {
+/* eslint-disable perfectionist/sort-objects */
+import * as tseslint from 'typescript-eslint';
+
+export default tseslint.config({
   rules: {
     // Enforce “for” loop update clause moving the counter in the right direction
     // https://eslint.org/docs/rules/for-direction
@@ -67,8 +70,7 @@ module.exports = {
 
     // Replace Airbnb 'no-extra-parens' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.mdx
-    'no-extra-parens': 'off',
-    '@typescript-eslint/no-extra-parens': [
+    '@stylistic/no-extra-parens': [
       'off',
       'all',
       {
@@ -82,8 +84,7 @@ module.exports = {
 
     // Replace Airbnb 'no-extra-semi' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-semi.mdx
-    'no-extra-semi': 'off',
-    '@typescript-eslint/no-extra-semi': 'error',
+    '@stylistic/no-extra-semi': 'error',
 
     // disallow overwriting functions written as function declarations
     'no-func-assign': 'error',
@@ -102,8 +103,7 @@ module.exports = {
 
     // Replace Airbnb 'no-loss-of-precision' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-loss-of-precision.mdx
-    'no-loss-of-precision': 'off',
-    '@typescript-eslint/no-loss-of-precision': 'error',
+    'no-loss-of-precision': 'error',
 
     // Disallow characters which are made with multiple code points in character class syntax
     // https://eslint.org/docs/rules/no-misleading-character-class
@@ -177,10 +177,6 @@ module.exports = {
     // https://eslint.org/docs/rules/no-useless-backreference
     'no-useless-backreference': 'error',
 
-    // disallow negation of the left operand of an in expression
-    // deprecated in favor of no-unsafe-negation
-    'no-negated-in-lhs': 'off',
-
     // Disallow assignments that can lead to race conditions due to usage of await or yield
     // https://eslint.org/docs/rules/require-atomic-updates
     // note: not enabled because it is very buggy
@@ -189,12 +185,8 @@ module.exports = {
     // disallow comparisons with the value NaN
     'use-isnan': 'error',
 
-    // ensure JSDoc comments are valid
-    // https://eslint.org/docs/rules/valid-jsdoc
-    'valid-jsdoc': 'off',
-
     // ensure that the results of typeof are compared against a valid string
     // https://eslint.org/docs/rules/valid-typeof
     'valid-typeof': ['error', { requireStringLiterals: true }],
   },
-};
+});

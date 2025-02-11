@@ -2,11 +2,13 @@
 /vscode
 /.husky
 /node_modules
+/.pnpm-store
+/docker
+docker-compose.yml
 .editorconfig
-.eslintignore
-.eslintrc.js
+eslint.config.mjs
 .gitignore
 .npmignore
-.prettierrc.js
-commitlint.config.js
+prettier.config.mjs
+commitlint.config.mjs
 tsconfig.json

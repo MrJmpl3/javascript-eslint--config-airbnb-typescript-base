@@ -1,4 +1,7 @@
-module.exports = {
+/* eslint-disable perfectionist/sort-objects */
+import * as tseslint from 'typescript-eslint';
+
+export default tseslint.config({
   rules: {
     // Static analysis:
 
@@ -91,11 +94,6 @@ module.exports = {
     // disallow non-import statements appearing before import statements
     // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/first.md
     'import/first': 'error',
-
-    // disallow non-import statements appearing before import statements
-    // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/imports-first.md
-    // deprecated: use `import/first`
-    'import/imports-first': 'off',
 
     // disallow duplicate imports
     // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
@@ -284,4 +282,4 @@ module.exports = {
     // https://github.com/import-js/eslint-plugin-import/blob/d5fc8b670dc8e6903dbb7b0894452f60c03089f5/docs/rules/no-empty-named-blocks.md
     'import/no-empty-named-blocks': 'off',
   },
-};
+});

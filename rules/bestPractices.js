@@ -1,4 +1,7 @@
-module.exports = {
+/* eslint-disable perfectionist/sort-objects */
+import * as tseslint from 'typescript-eslint';
+
+export default tseslint.config({
   rules: {
     // enforces getter/setter pairs in objects
     // https://eslint.org/docs/rules/accessor-pairs
@@ -53,7 +56,7 @@ module.exports = {
 
     // enforces consistent newlines before or after dots
     // https://eslint.org/docs/rules/dot-location
-    'dot-location': ['error', 'property'],
+    '@stylistic/dot-location': ['error', 'property'],
 
     // require the use of === and !==
     // https://eslint.org/docs/rules/eqeqeq
@@ -139,15 +142,11 @@ module.exports = {
 
     // disallow the use of leading or trailing decimal points in numeric literals
     // https://eslint.org/docs/rules/no-floating-decimal
-    'no-floating-decimal': 'error',
+    '@stylistic/no-floating-decimal': 'error',
 
     // disallow reassignments of native objects or read-only globals
     // https://eslint.org/docs/rules/no-global-assign
     'no-global-assign': ['error', { exceptions: [] }],
-
-    // deprecated in favor of no-global-assign
-    // https://eslint.org/docs/rules/no-native-reassign
-    'no-native-reassign': 'off',
 
     // disallow implicit type conversions
     // https://eslint.org/docs/rules/no-implicit-coercion
@@ -208,7 +207,7 @@ module.exports = {
 
     // disallow use of multiple spaces
     // https://eslint.org/docs/rules/no-multi-spaces
-    'no-multi-spaces': [
+    '@stylistic/no-multi-spaces': [
       'error',
       {
         ignoreEOLComments: false,
@@ -336,7 +335,6 @@ module.exports = {
 
     // Replace Airbnb 'no-return-await' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.mdx
-    'no-return-await': 'off',
     '@typescript-eslint/return-await': 'off',
 
     // disallow use of `javascript:` urls.
@@ -363,7 +361,7 @@ module.exports = {
     // Replace Airbnb 'no-throw-literal' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-throw-literal.mdx
     'no-throw-literal': 'off',
-    '@typescript-eslint/no-throw-literal': 'off',
+    '@typescript-eslint/only-throw-error': 'off',
 
     // disallow unmodified conditions of loops
     // https://eslint.org/docs/rules/no-unmodified-loop-condition
@@ -459,10 +457,14 @@ module.exports = {
 
     // require immediate function invocation to be wrapped in parentheses
     // https://eslint.org/docs/rules/wrap-iife.html
-    'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
+    '@stylistic/wrap-iife': [
+      'error',
+      'outside',
+      { functionPrototypeMethods: false },
+    ],
 
     // require or disallow Yoda conditions
     // https://eslint.org/docs/rules/yoda
     yoda: 'error',
   },
-};
+});

@@ -1,12 +1,11 @@
-const confusingBrowserGlobals = require('confusing-browser-globals');
+/* eslint-disable perfectionist/sort-objects */
+import confusingBrowserGlobals from 'confusing-browser-globals';
+import * as tseslint from 'typescript-eslint';
 
-module.exports = {
+export default tseslint.config({
   rules: {
     // enforce or disallow variable initializations at definition
     'init-declarations': 'off',
-
-    // disallow the catch clause parameter name being the same as a variable in the outer scope
-    'no-catch-shadow': 'off',
 
     // disallow deletion of variables
     'no-delete-var': 'error',
@@ -58,7 +57,7 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
+      { args: 'after-used', ignoreRestSiblings: true, vars: 'all' },
     ],
 
     // Replace Airbnb 'no-use-before-define' rule with '@typescript-eslint' version
@@ -66,7 +65,7 @@ module.exports = {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
       'error',
-      { functions: true, classes: true, variables: true },
+      { classes: true, functions: true, variables: true },
     ],
   },
-};
+});

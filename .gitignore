@@ -1,2 +1,23 @@
-/.idea
 /node_modules
+.env
+.env.backup
+docker-compose.override.yml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+
+# VSCode
+*.code-workspace
+
+# Yarn 2
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# PNPM
+/.pnpm-store
